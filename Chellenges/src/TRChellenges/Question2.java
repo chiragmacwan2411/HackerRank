@@ -9,14 +9,14 @@ public class Question2 {
         List<String> anagramString = new ArrayList<>();
         List<char[]> anagram = new ArrayList<>();
 
-        String s0 = "chirag";
-        String s1 = "garihc";
-        String s2 = "arihcg";
-        String s3 = "ihcgar";
-        String s4 = "sarjana";
-        String s5 = "arjanas";
-        String s6 = "rjanasa";
-        String s7 = "janasar";
+        String s0 = "code";
+        String s1 = "edoc";
+        String s2 = "eye";
+        String s3 = "yee";
+        String s4 = "eey";
+        String s5 = "egg";
+        String s6 = "gge";
+        String s7 = "geg";
 
         anagramString.add(s0);
         anagramString.add(s1);
