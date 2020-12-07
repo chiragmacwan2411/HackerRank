@@ -1,4 +1,4 @@
-package com.ThomsonReutersTest;
+package TRChellenges;
 //TR's polymorphism chellenge
 public class Question3 {
     public static void main(String[] args) {

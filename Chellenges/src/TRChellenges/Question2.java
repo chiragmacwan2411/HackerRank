@@ -1,4 +1,4 @@
-package com.ThomsonReutersTest;
+package TRChellenges;
 //TR's Anagram Chellenge
 import java.util.ArrayList;
 import java.util.Arrays;

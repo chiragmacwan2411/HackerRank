@@ -1,4 +1,4 @@
-package com.ThomsonsReutersSampleFizzBuzzTest;
+package TRChellenges;
 
 import java.io.BufferedReader;
 import java.io.IOException;
