@@ -4,23 +4,36 @@ import java.util.List;
 
 public class Solution {
     public static int jumpingOnClouds(int[] clouds){
-        //0010010
-        List<Integer> path = new ArrayList<>();
-        for (int i = 0; i < clouds.length; i++) {
-            if (clouds[i] == 0) {
-                path.add(i);
+        //0100010
+        List<Integer> cloudsPathShort = new ArrayList();
+        if (clouds.length == 2){
+            return clouds.length - 1;
+        }
+//        System.out.println(cloudsPath);
+        int dynamic_i = 0;
+        for (int i = 0; i < clouds.length - 2; i++) {
+            if (i == dynamic_i) {
+                if (i == 0) {
+                    cloudsPathShort.add(i);
+                }
+                if (clouds[i] != 1){
+                    int shortJumpCloud = clouds[i+1];
+                    int longJumpCloud = clouds[i+2];
+                    if ( ((shortJumpCloud == 0) & (longJumpCloud == 0)) || ((shortJumpCloud == 1) & (longJumpCloud == 0)) ){
+                        cloudsPathShort.add(i+2);
+                        dynamic_i = i + 2;
+                    }
+                    else if ((shortJumpCloud == 0) & (longJumpCloud == 1)) {
+                        cloudsPathShort.add(i+1);
+                        dynamic_i = i + 1;
+                    }
+                }
             }
         }
-
-        List<Integer> shortestPath = new ArrayList<>();
-        shortestPath.add(path.get(0));
-        for (int i = 1; i < path.size()-1; i++) {
-            if (path.get(i+1) == path.get(i) + 1 ){
-                shortestPath.add(path.get(i+1));
-            }
-            else {shortestPath.add(path.get(i));}
+        if ((clouds.length-1) != (cloudsPathShort.get(cloudsPathShort.size()-1))){
+            cloudsPathShort.add(clouds.length);
         }
-        shortestPath.add(path.get(path.size()-1));
-        return 0;
+        System.out.println(cloudsPathShort);
+        return cloudsPathShort.size() - 1;
     }
 }

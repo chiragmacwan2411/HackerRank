@@ -8,7 +8,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
         int[] clouds = {0,0,1,0,0,1,0};
-//        int[] clouds = {0,0};
         System.out.println(Solution.jumpingOnClouds(clouds));
     }
 }
